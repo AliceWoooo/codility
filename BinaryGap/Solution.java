@@ -10,9 +10,7 @@ class Solution {
         for(int i=0; i<binary.length(); i++) {
             char c = binary.charAt(i);
             if(c=='1') {
-                if(count>max) {
-                    max = count;
-                }
+                max = Math.max(max, count);
                 count=0;
             }
             else if(c=='0') {
