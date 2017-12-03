@@ -15,7 +15,7 @@ class Solution {
             
             int k = i+i;
             while(k<=N) {
-                primeNum[k]=primeNum[k]+primeNum[i]+1;
+                primeNum[k]= primeNum[i]!=0? 1 : primeNum[k]+1;
                 k+=i;
             }
         }
