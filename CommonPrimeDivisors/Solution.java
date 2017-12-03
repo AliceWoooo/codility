@@ -21,11 +21,8 @@ class Solution {
     public boolean isPD(long a, long b, long check) {
         long common = gcd(a,b);
         long remain = a*b/(common*common);
-        if(common==1&&check%remain==0){
-            return true;
-        }
-        else if(common==1) {
-            return false;
+        if(common==1){
+            return check%remain==0;
         }
         else {
             return isPD(common,remain,check);
